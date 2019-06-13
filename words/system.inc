@@ -8,9 +8,9 @@ native 'isbranch', isbranch
   jmp next
 
 native 'lit', lit
-    push qword [pc]
-    add pc, 8
-    jmp next
+  push qword [pc]
+  add pc, 8
+  jmp next
 
 native 'pushlit', pushlit
   push xt_lit
@@ -77,8 +77,8 @@ native 'branchifz', branchifz
     jmp next
 
 native 'branch', branch
-    mov pc, [pc]
-    jmp next
+  mov pc, [pc]
+  jmp next
 
 native 'docol', docol
   sub rstack, 8
@@ -100,8 +100,6 @@ native 'create', create
   mov [rsi], rcx
   mov [last_word], rsi
   add rsi, 8
-  ;mov byte [rsi], 0
-  ;inc rsi
 
   ; name creation
   pop rdi

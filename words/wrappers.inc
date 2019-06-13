@@ -42,7 +42,7 @@ native 'save_lw', save_lw
 
 native 'cfa', cfa
   pop rdi
-	call cfa
+  call cfa
   push rax
   jmp next
 
